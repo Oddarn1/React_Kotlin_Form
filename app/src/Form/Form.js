@@ -6,6 +6,7 @@ const Form = () =>{
     const [phone,setPhone]=React.useState("");
     const [areacode,setAreacode]=React.useState("");
     const [comment,setComment]=React.useState("");
+    const [error,setError]=React.useState(null)
 
     const resetFields=()=>{
         setName("");
@@ -30,13 +31,15 @@ const Form = () =>{
             },
             body:obj,
         });
-        const json=await resp.json();
-        console.log(json);
-        resetFields()
+        if (resp.status!==200){
+            setError("Klarte ikke oppdatere, vennligst prøv igjen")
+        }else {
+            resetFields()
+        }
     };
 
     return (
-        <form onSubmit={()=>submit()}>
+        <div>
             <label>
                 Navn:
                 <br/>
@@ -67,10 +70,12 @@ const Form = () =>{
                 <textarea onChange={e=>setComment(e.target.value)} value={comment}/>
             </label>
             <br/><br/>
-            <button>
+            {error}
+            <br/>
+            <button onClick={submit}>
                 Submit
             </button>
-        </form>
+        </div>
     )
 };
 

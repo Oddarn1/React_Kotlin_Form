@@ -1,13 +1,30 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './App.css';
+import Answers from '../Answers/Answers'
 import Form from '../Form/Form';
+import {
+    BrowserRouter as Router,
+    Link,
+    Switch,
+    Route,
+    Redirect
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Form/>
-    </div>
+      <Router>
+          <Switch>
+              <Route exact path={"/form"}>
+                  <Form/>
+              </Route>
+              <Route path={"/answers"}>
+                  <Answers/>
+              </Route>
+              <Route path={"/"}>
+                  <Redirect to={"/form"}/>
+              </Route>
+          </Switch>
+      </Router>
   );
 }
 
