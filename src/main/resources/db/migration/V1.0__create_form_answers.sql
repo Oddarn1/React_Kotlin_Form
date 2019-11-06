@@ -10,7 +10,7 @@ CREATE TABLE form(
 );
 
 insert into form(id,name,email,phone,areacode)
-values (1, 'Test Testesen', 'test@test.no', 12345678,7031);
+values (1, 'Test Testesen', 'test@test.no', 22345678,7031);
 
 insert into form(id,name,email,phone,areacode,comment)
 values (2, 'Testa Testesen', 'testa@test.no', 87654321,7032, 'Dette er en test');

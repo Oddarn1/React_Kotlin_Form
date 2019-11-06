@@ -7,12 +7,14 @@ import com.github.kittinunf.fuel.httpGet
 import forms.Exceptions.ApiException
 import org.springframework.stereotype.Service
 
+data class PostalApiResponse(val result:String, val valid:Boolean,val postalCodeType:String)
+
 @Service
 class PostalApiService{
     private val mapper = jacksonObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
     private val BASE_URL = "https://api.bring.com/shippingguide/api/postalCode.json?"
 
-    fun getPostal(pnr:Int){
+    fun getPostal(pnr:Int):PostalApiResponse{
         val response= makeHTTPRequest(pnr=pnr)
         return mapper.readValue(response)
     }

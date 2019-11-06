@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const Loading = (props) => Comp => (
+export const Loading = () => (
     <div>
-        {props.loading?<div>Loading...</div>:<Comp/>}
+        <div>Loading...</div>
     </div>
 );

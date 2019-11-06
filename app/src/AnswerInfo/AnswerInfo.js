@@ -1,20 +1,21 @@
 import React from 'react';
+import AnswerList from "../Answers/AnswerList";
 import {Loading} from "../Loading/Loading";
-import AnswerList from './AnswerList';
 
-const Answers = () => {
-    const [answers, setAnswers] = React.useState([]);
+const AnswerInfo = (props) => {
+    const [answer, setAnswer] = React.useState(Object);
     const [loading,setLoading]=React.useState(false);
     const [error,setError]=React.useState(null);
 
     async function fetchAnswers() {
+        const { match: { params } } = props;
         setLoading(true);
         try {
             const response = await fetch(
-                "http://localhost:5000/api/forms"
+                `http://localhost:5000/api/forms/${params.formId}`
             );
             const data = await response.json();
-            setAnswers(data);
+            setAnswer(data);
             setLoading(false);
         } catch (err) {
             if (err.name !== "AbortError") {
@@ -32,9 +33,17 @@ const Answers = () => {
     return (
         <div>
             {error}
-            <AnswerList answers={answers} loading={loading}/>
+            {loading&&<Loading/>}
+            {!loading&&
+            <div>
+                Navn: {answer.name} <br/>
+                Epost: {answer.email} <br/>
+                Telefon: {answer.phone} <br/>
+                Postnummer: {answer.areacode} <br/>
+                Kommentar: {answer.comment} <br/>
+            </div>}
         </div>
     )
 };
 
-export default Answers
+export default AnswerInfo;

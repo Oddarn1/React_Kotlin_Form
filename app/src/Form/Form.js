@@ -6,7 +6,7 @@ const Form = () =>{
     const [phone,setPhone]=React.useState("");
     const [areacode,setAreacode]=React.useState("");
     const [comment,setComment]=React.useState("");
-    const [error,setError]=React.useState(null)
+    const [error,setError]=React.useState(null);
 
     const resetFields=()=>{
         setName("");

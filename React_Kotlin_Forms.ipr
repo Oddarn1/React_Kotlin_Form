@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Nettbureau_backend" />
+        <module name="React_Kotlin_Forms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Nettbureau_backend" target="11" />
+      <module name="React_Kotlin_Forms" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
@@ -38,7 +38,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Nettbureau_backend" options="-parameters" />
+      <module name="React_Kotlin_Forms" options="-parameters" />
     </option>
   </component>
   <component name="Kotlin2JvmCompilerArguments">
@@ -68,7 +68,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Nettbureau_backend.iml" filepath="$PROJECT_DIR$/Nettbureau_backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/React_Kotlin_Forms.iml" filepath="$PROJECT_DIR$/React_Kotlin_Forms.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -270,6 +270,28 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.4.199/h2-1.4.199-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.sendgrid:java-http-client:4.1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sendgrid/java-http-client/4.1.0/java-http-client-4.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sendgrid/java-http-client/4.1.0/java-http-client-4.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sendgrid/java-http-client/4.1.0/java-http-client-4.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sendgrid:sendgrid-java:4.4.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sendgrid/sendgrid-java/4.4.1/sendgrid-java-4.4.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sendgrid/sendgrid-java/4.4.1/sendgrid-java-4.4.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sendgrid/sendgrid-java/4.4.1/sendgrid-java-4.4.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.zaxxer:HikariCP:3.2.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar!/" />
@@ -279,6 +301,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-codec:commons-codec:1.11">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: io.micrometer:micrometer-core:1.1.4">
@@ -358,6 +391,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: net.bytebuddy:byte-buddy-agent:1.9.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.9.12/byte-buddy-agent-1.9.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.9.12/byte-buddy-agent-1.9.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.9.12/byte-buddy-agent-1.9.12-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: net.bytebuddy:byte-buddy:1.9.12">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar!/" />
@@ -367,6 +411,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.httpcomponents:httpclient:4.5.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.httpcomponents:httpcore:4.4.11">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.logging.log4j:log4j-api:2.11.2">
@@ -609,6 +675,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.mockito:mockito-core:2.23.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.objenesis:objenesis:2.6">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.slf4j:jul-to-slf4j:1.7.26">
