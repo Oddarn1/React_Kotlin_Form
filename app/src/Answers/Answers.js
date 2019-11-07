@@ -1,6 +1,7 @@
 import React from 'react';
-import {Loading} from "../Loading/Loading";
 import AnswerList from './AnswerList';
+import {Link} from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 const Answers = () => {
     const [answers, setAnswers] = React.useState([]);
@@ -30,9 +31,15 @@ const Answers = () => {
     },[]);
 
     return (
-        <div>
+        <div style={{width:"100%"}}>
             {error}
             <AnswerList answers={answers} loading={loading}/>
+            <Link to={"/form"}>
+                <Button variant={"contained"} style={{marginTop:"3%"}}>
+                    Til skjema
+                </Button>
+            </Link>
+
         </div>
     )
 };

@@ -4,15 +4,17 @@ import Answers from '../Answers/Answers'
 import Form from '../Form/Form';
 import AnswerInfo from '../AnswerInfo/AnswerInfo';
 import {
-    BrowserRouter as Router,
+    Router,
     Switch,
+    Link,
     Route,
     Redirect
 } from 'react-router-dom';
+import History from '../History/History'
 
 function App() {
   return (
-      <Router>
+      <Router history={History}>
           <Switch>
               <Route exact path={"/form"}>
                   <Form/>

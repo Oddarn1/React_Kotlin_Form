@@ -1,6 +1,8 @@
 import React from 'react';
 import AnswerList from "../Answers/AnswerList";
 import {Loading} from "../Loading/Loading";
+import Button from "@material-ui/core/Button";
+import {Link} from "react-router-dom";
 
 const AnswerInfo = (props) => {
     const [answer, setAnswer] = React.useState(Object);
@@ -42,6 +44,9 @@ const AnswerInfo = (props) => {
                 Postnummer: {answer.areacode} <br/>
                 Kommentar: {answer.comment} <br/>
             </div>}
+            <Link to={"/answers"}>
+                <Button variant={"contained"}>Tilbake til svar</Button>
+            </Link>
         </div>
     )
 };

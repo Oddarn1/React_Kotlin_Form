@@ -1,7 +1,9 @@
 # Form to fill in personalia, created in Kotlin with Spring Boot and React
 
+#### This project is mainly focused on the backend part of the case. 
 
-You need to have npm installed to run this project. To install, visit: https://www.npmjs.com/get-npm.
+This includes a boilerplate React-app to visualize how the backend works. 
+You need to have npm installed to run this. To install, visit: https://www.npmjs.com/get-npm.
 
 You will also need to have Maven and Java 11 installed. 
 
@@ -19,6 +21,7 @@ Email for receiving new answers are also defined in .env, and needs to be update
 .env fil will then have this structure:
 
 `SENDGRID_API_KEY="SG.*APIKEY*"`
+
 `RECEIVER_EMAIL=*Your email here*"`
 
 ### Roadmap

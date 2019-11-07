@@ -1,4 +1,9 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
+import './Form.css'
+import {Link} from "react-router-dom";
+import {Typography} from "@material-ui/core";
 
 const Form = () =>{
     const [name,setName]=React.useState("");
@@ -41,42 +46,73 @@ const Form = () =>{
     };
 
     return (
-        <div>
-            <label>
-                Navn:
-                <br/>
-                <input type={"text"} onChange={e=>setName(e.target.value)} value={name} placeholder={"Ola Nordmann"}/>
-            </label>
+        <div className={"form"}>
+            <div className={"centering"}>
+            <TextField type={"text"}
+                       onChange={e=>setName(e.target.value)}
+                       className={"textField"}
+                       value={name}
+                       label={"Navn"}
+                       placeholder={"Ola Nordmann"}
+                       margin="normal"
+                       variant="outlined"/>
             <br/><br/>
-            <label>
-                Epost:
-                <br/>
-                <input type={"email"} onChange={e=>setEmail(e.target.value)} value={email} placeholder={"navn@domene.no"}/>
-            </label>
+            <TextField type={"email"}
+                       onChange={e=>setEmail(e.target.value)}
+                       className={"textField"}
+                       value={email}
+                       label={"Epost"}
+                       placeholder={"navn@domene.no"}
+                       margin="normal"
+                       variant="outlined"/>
             <br/><br/>
-            <label>
-                Telefon:
-                <br/>
-                <input type={"tel"} onChange={e=>setPhone(e.target.value)} value={phone} placeholder={"XXX XX XXX"}/>
-            </label>
+            <TextField type={"tel"}
+                       onChange={e=>setPhone(e.target.value)}
+                       className={"textField"}
+                       label={"Telefon"}
+                       value={phone}
+                       placeholder={"XXX XX XXX"}
+                       margin="normal"
+                       variant="outlined"/>
             <br/><br/>
-            <label>
-                Postnummer:
-                <br/>
-                <input type={"number"} onChange={e=>setAreacode(e.target.value)} value={areacode} max={"9999"} placeholder={"1234"}/>
-            </label>
+            <TextField type={"number"}
+                       label={"Postnummer"}
+                       onChange={e=>setAreacode(e.target.value)}
+                       className={"textField"}
+                       value={areacode}
+                       max={"9999"}
+                       min={"0000"}
+                       margin="normal"
+                       variant="outlined"
+                       placeholder={"1234"}/>
             <br/><br/>
-            <label>
-                Kommentar:
-                <br/>
-                <textarea onChange={e=>setComment(e.target.value)} value={comment}/>
-            </label>
+            <TextField onChange={e=>setComment(e.target.value)}
+                       className={"textField"}
+                       value={comment}
+                       label={"Kommentar"}
+                       multiline
+                       margin="normal"
+                       variant="outlined"/>
             <br/><br/>
-            {error}
+            <Typography variant={"body1"} style={{color:"#DD2222"}}>
+                {error}
+            </Typography>
             <br/>
-            <button onClick={submit}>
-                Submit
-            </button>
+            <div className={"buttonDiv"}>
+                <Button onClick={submit}
+                        className={"button"}
+                        variant={"contained"}>
+                    Send inn
+                </Button>
+                <Link to={"/answers"} className={"link"}>
+                    <Button href={"button"}
+                            className={"button"}
+                            variant={"contained"}>
+                        Til svar
+                    </Button>
+                </Link>
+            </div>
+            </div>
         </div>
     )
 };

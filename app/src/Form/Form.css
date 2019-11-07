@@ -1,0 +1,27 @@
+.form {
+    margin-left: 27%;
+    width: 40%;
+    background: steelblue;
+    border-radius: 25px;
+    padding: 3%;
+}
+
+.textField{
+    width:80%;
+    background: white;
+}
+
+.centering{
+    margin-left:13%;
+}
+
+.buttonDiv{
+    width:80%;
+}
+
+.button{
+    width:48%;
+    color:black;
+    font-style: normal;
+    text-underline-mode: none;
+}
