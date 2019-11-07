@@ -6,7 +6,6 @@ import AnswerInfo from '../AnswerInfo/AnswerInfo';
 import {
     Router,
     Switch,
-    Link,
     Route,
     Redirect
 } from 'react-router-dom';

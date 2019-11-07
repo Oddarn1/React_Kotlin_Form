@@ -27,12 +27,16 @@ The backend is built as a REST-API, with 3 endpoints, 2 for GET-requests and 1 f
 These endpoints are located at `/api/forms/{id}` where id is used when getting a specific form-answer.
 When posting a form or getting all answers, one should only use `/api/forms`.
 
+The validation done in the backend only returns HTTP-response to the frontend,such that the error messages
+displayed in the frontend is very unspecific. Validation on input-fields in frontend is expected, but I didn't have enough time to implement this.
+
 This project is inspired by "Kotlin og Spring boot med Netcompany", a course by Netcompany for Abakus-students. Repository can be found at https://github.com/netcompanyno/kotlin-kurs.
 
 
 ### Roadmap
-Future releases will further develop the frontend. Besides this, it is thought that implementing
+Future releases should further develop the frontend. Besides this, it is thought that implementing
 API keys for access of data and cookies to prevent spamming answers of the form is an important extension of the backend.
 Next step would also include implementing unit tests of the backend, as this is something I have not had the time to do.
 
-For the REST API it is possible to implement saving forms to profiles to review and change later with PUT-requests and DELETE-requests.
+For the REST API it would be an idea to implement saving forms to profiles to review and change later with PUT-requests and DELETE-requests.
+This means that it should be possible to connect forms to a user that can resume an unfulfilled form or change one that has been completed earlier. 
