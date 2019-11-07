@@ -10,8 +10,8 @@ You will also need to have Maven and Java 11 installed.
 Begin by installing dependencies by running `cd app && npm install`.
 
 To run locally: 
-- Run Application.kt by running `mvn spring-boot:run` in the root-folder. This creates a local version of the database and backend with 2 dummy values at port 5000.
-- Start the React-application by running `cd app && npm run`. This will start the frontend application at port 3000.
+- Run Application.kt by running `mvn spring-boot:run` in the root-folder. This creates a local version of the database and backend with 2 dummy values at localhost:5000.
+- Start the React-application by running `cd app && npm run`. This will start the frontend application at localhost:3000.
 
 These ports are set up to communicate, such that the frontend can access the API at port 5000.
 
