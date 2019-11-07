@@ -32,8 +32,10 @@ const Form = () =>{
             body:obj,
         });
         if (resp.status!==200){
+            console.log(resp);
             setError("Klarte ikke oppdatere, vennligst prøv igjen")
         }else {
+            setError(null);
             resetFields()
         }
     };

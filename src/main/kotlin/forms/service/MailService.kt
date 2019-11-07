@@ -1,15 +1,24 @@
 package forms.service
 
 import com.sendgrid.*
+import io.github.cdimascio.dotenv.Dotenv
 
 class MailService {
-    fun sendEmail():Response {
-        val sendgrid = SendGrid(System.getenv("SENDGRID_API_KEY"))
+    fun sendEmail(name:String, email:String):Response {
+        val dotenv= Dotenv.load()
+        //.env file containing fields SENDGRID_API_KEY and RECIEVER_EMAIL
+        val sendgrid = SendGrid(dotenv["SENDGRID_API_KEY"])
+        val receiver=dotenv["RECEIVER_EMAIL"]
         val request = Request()
         request.method = Method.POST
         request.endpoint = "mail/send"
         request.body =
-            "{\"personalizations\":[{\"to\":[{\"email\":\"oddarn97@gmail.com\"}],\"subject\":\"Sending with Twilio SendGrid is Fun\"}],\"from\":{\"email\":\"oddandreowren@gmail.com\"},\"content\":[{\"type\":\"text/plain\",\"value\": \"and easy to do anywhere, even with Kotlin\"}]}"
+            "{\"personalizations\":" +
+                    "[{\"to\":[{\"email\":\"$receiver\"}]," +
+                    "\"subject\":\"Ny registrering i skjema\"}]," +
+                    "\"from\":{\"email\":\"$email\"}," +
+                    "\"content\":[{\"type\":\"text/plain\"," +
+                    "\"value\": \"Bruker ved navn $name har registrert seg i case-skjemaet til Odd André Owren.\"}]}"
         val response = sendgrid.api(request)
         return response
     }

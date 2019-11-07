@@ -24,18 +24,15 @@
         <version>2.1.4.RELEASE</version>
     </parent>
 
-    <repositories>
-        <repository>
-            <id>mavenCentral</id>
-            <name>mavenCentral</name>
-            <url>http://jarsm2.dyndns.dk</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>java-dotenv</artifactId>
+            <version>5.1.3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -163,6 +160,11 @@
             <id>spring-lib-release-repo</id>
             <name>Spring Lib Release Repository</name>
             <url>http://repo.spring.io/libs-release/</url>
+        </repository>
+        <repository>
+            <id>mavenCentral</id>
+            <name>mavenCentral</name>
+            <url>http://jarsm2.dyndns.dk</url>
         </repository>
     </repositories>
 </project>

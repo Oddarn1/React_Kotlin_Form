@@ -1,6 +1,5 @@
 package forms.service
 
-import forms.service.MailService
 import forms.domain.FormEntity
 import forms.dto.FormDto
 import forms.repository.FormRepository
@@ -23,10 +22,10 @@ class FormService(val formRepository: FormRepository){
         val formEntity=FormEntity(formDto)
         try {
             val mailService = MailService()
-            val response = mailService.sendEmail()
+            val response = mailService.sendEmail(formDto.name,formDto.email)
             print(response)
         }catch(e:Exception){
-            print(System.getenv("SENDGRID_API_KEY"))
+            print(e)
         }
         return FormDto(formRepository.save(formEntity))
     }
