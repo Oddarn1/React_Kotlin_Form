@@ -10,8 +10,10 @@ You will also need to have Maven and Java 11 installed.
 Begin by installing dependencies by running `cd app && npm install`.
 
 To run locally: 
-- Run Application.kt located in `src/main/kotlin/forms` for a local version of the database and backend with 2 dummy values.
-- Start the React-application by running `cd app && npm run`. This will start the frontend application.
+- Run Application.kt by running `mvn spring-boot:run` in the root-folder. This creates a local version of the database and backend with 2 dummy values at port 5000.
+- Start the React-application by running `cd app && npm run`. This will start the frontend application at port 3000.
+
+These ports are set up to communicate, such that the frontend can access the API at port 5000.
 
 For email-service I have registered for Sendgrid. To be able to send your own emails with this application, you will need to list a Sendgrid API key in a .env-file in the root folder. 
 Email for receiving new answers are also defined in .env, and needs to be updated for local use.
